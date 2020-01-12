@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bootstrap Lightbox</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <h2>Image Gallery</h2>
+    <div class="row">
+      <div class="col-md-4 mt-4">
+        <a href="images/butterfly.jpeg" data-toggle="lightbox" data-gallery="image-gallery" data-title="Flower">
+          <img src="images//butterfly.jpeg" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-md-4 mt-4">
+        <a href="images/flower.jpeg" data-toggle="lightbox" data-gallery="image-gallery" data-title="Coffee">
+          <img src="images/flower.jpeg" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-md-4 mt-4">
+        <a href="images/road.jpeg" data-toggle="lightbox" data-gallery="image-gallery" data-title="Telephone">
+          <img src="images/road.jpeg" class="img-fluid">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox({
+          alwaysShowClose: true,
+          showArrows: true,
+        });
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
